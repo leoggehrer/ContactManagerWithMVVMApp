@@ -1,0 +1,21 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="using:ContactManager.MVVMApp.ViewModels"
+		xmlns:views="using:ContactManager.MVVMApp.Views"
+        mc:Ignorable="d" d:DesignWidth="460" d:DesignHeight="320"
+        x:Class="ContactManager.MVVMApp.Views.ContactWindow"
+		x:DataType="vm:ContactViewModel"
+		WindowStartupLocation="CenterOwner"
+		Width="460"
+		Height="500"
+        Title="Kontakt">
+
+	<Window.DataContext>
+		<vm:ContactViewModel />
+	</Window.DataContext>
+
+	<views:ContactUserControl DataContext="{Binding}" />
+
+</Window>
